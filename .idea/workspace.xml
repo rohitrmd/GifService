@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0deec4c5-67e8-40fc-bb38-66d5db7e865a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1zKZYsfcoN6T0vFXngLm84Lvszo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+  </component>
+  <component name="RunManager" selected="Kotlin.SignalsGifServer">
+    <configuration name="HelloKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="GifService" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.signals.HelloKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SignalsGifServer" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="GifService" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.signals.server.SignalsGifServer" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.SignalsGifServer" />
+        <item itemvalue="Kotlin.HelloKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0deec4c5-67e8-40fc-bb38-66d5db7e865a" name="Default Changelist" comment="" />
+      <created>1633898791017</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1633898791017</updated>
+      <workItem from="1633898794076" duration="10781000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1050" y="412" key="#com.intellij.ide.util.MemberChooser" timestamp="1633979337505">
+      <screen x="0" y="23" width="2560" height="1329" />
+    </state>
+    <state x="1050" y="412" key="#com.intellij.ide.util.MemberChooser/0.23.2560.1329@0.23.2560.1329" timestamp="1633979337505" />
+    <state x="1039" y="601" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1633980709543">
+      <screen x="0" y="23" width="2560" height="1329" />
+    </state>
+    <state x="1039" y="601" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.2560.1329@0.23.2560.1329" timestamp="1633980709543" />
+    <state width="2518" height="379" key="GridCell.Tab.0.bottom" timestamp="1633981006429">
+      <screen x="0" y="23" width="2560" height="1329" />
+    </state>
+    <state width="2518" height="379" key="GridCell.Tab.0.bottom/0.23.2560.1329@0.23.2560.1329" timestamp="1633981006429" />
+    <state width="2518" height="379" key="GridCell.Tab.0.center" timestamp="1633981006428">
+      <screen x="0" y="23" width="2560" height="1329" />
+    </state>
+    <state width="2518" height="379" key="GridCell.Tab.0.center/0.23.2560.1329@0.23.2560.1329" timestamp="1633981006428" />
+    <state width="2518" height="379" key="GridCell.Tab.0.left" timestamp="1633981006427">
+      <screen x="0" y="23" width="2560" height="1329" />
+    </state>
+    <state width="2518" height="379" key="GridCell.Tab.0.left/0.23.2560.1329@0.23.2560.1329" timestamp="1633981006427" />
+    <state width="2518" height="379" key="GridCell.Tab.0.right" timestamp="1633981006428">
+      <screen x="0" y="23" width="2560" height="1329" />
+    </state>
+    <state width="2518" height="379" key="GridCell.Tab.0.right/0.23.2560.1329@0.23.2560.1329" timestamp="1633981006428" />
+    <state width="2518" height="466" key="GridCell.Tab.1.bottom" timestamp="1633980053684">
+      <screen x="0" y="23" width="2560" height="1329" />
+    </state>
+    <state width="2518" height="466" key="GridCell.Tab.1.bottom/0.23.2560.1329@0.23.2560.1329" timestamp="1633980053684" />
+    <state width="2518" height="466" key="GridCell.Tab.1.center" timestamp="1633980053683">
+      <screen x="0" y="23" width="2560" height="1329" />
+    </state>
+    <state width="2518" height="466" key="GridCell.Tab.1.center/0.23.2560.1329@0.23.2560.1329" timestamp="1633980053683" />
+    <state width="2518" height="466" key="GridCell.Tab.1.left" timestamp="1633980053683">
+      <screen x="0" y="23" width="2560" height="1329" />
+    </state>
+    <state width="2518" height="466" key="GridCell.Tab.1.left/0.23.2560.1329@0.23.2560.1329" timestamp="1633980053683" />
+    <state width="2518" height="466" key="GridCell.Tab.1.right" timestamp="1633980053684">
+      <screen x="0" y="23" width="2560" height="1329" />
+    </state>
+    <state width="2518" height="466" key="GridCell.Tab.1.right/0.23.2560.1329@0.23.2560.1329" timestamp="1633980053684" />
+    <state x="1010" y="426" width="540" height="524" key="StructurePopup" timestamp="1633980845973">
+      <screen x="0" y="23" width="2560" height="1329" />
+    </state>
+    <state x="1010" y="426" width="540" height="524" key="StructurePopup/0.23.2560.1329@0.23.2560.1329" timestamp="1633980845973" />
+  </component>
+</project>
