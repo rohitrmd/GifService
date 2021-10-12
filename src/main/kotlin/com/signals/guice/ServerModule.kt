@@ -4,6 +4,7 @@ import com.google.inject.AbstractModule
 import com.google.inject.Provides
 import com.google.inject.Singleton
 import com.signals.server.SignalsServlet
+import org.eclipse.jetty.proxy.ConnectHandler
 import org.eclipse.jetty.server.HttpConfiguration
 import org.eclipse.jetty.server.HttpConnectionFactory
 import org.eclipse.jetty.server.SecureRequestCustomizer
@@ -61,8 +62,8 @@ class ServerModule : AbstractModule() {
 
     @Provides
     @Singleton
-    fun provideJettyServer(
-        servletContextHandler: ServletContextHandler,
+    fun createJettyServer(
+        signalsServlet: SignalsServlet,
         threadPool: QueuedThreadPool,
         httpConfig: HttpConfiguration,
         sslContextFactory: SslContextFactory
@@ -79,9 +80,13 @@ class ServerModule : AbstractModule() {
         https.port = 8001
         server.addConnector(https)
 
-        // setup handler
-        server.handler = servletContextHandler
+        // setup proxy handler
+        val proxy = ConnectHandler()
+        server.handler = proxy
 
+        // setup proxy servlet
+        val context = ServletContextHandler(proxy, "/", ServletContextHandler.SESSIONS)
+        context.addServlet(ServletHolder(signalsServlet), "/signals")
         return server
     }
 

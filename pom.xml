@@ -74,6 +74,11 @@
             <artifactId>jetty-servlet</artifactId>
             <version>${jetty.server.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-proxy</artifactId>
+            <version>${jetty.server.version}</version>
+        </dependency>
 
         <!-- http client -->
         <dependency>
