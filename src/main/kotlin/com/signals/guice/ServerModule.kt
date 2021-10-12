@@ -6,28 +6,41 @@ import com.google.inject.Singleton
 import com.signals.server.SignalsServlet
 import org.eclipse.jetty.server.HttpConfiguration
 import org.eclipse.jetty.server.HttpConnectionFactory
+import org.eclipse.jetty.server.SecureRequestCustomizer
 import org.eclipse.jetty.server.Server
 import org.eclipse.jetty.server.ServerConnector
+import org.eclipse.jetty.server.SslConnectionFactory
 import org.eclipse.jetty.servlet.ServletContextHandler
 import org.eclipse.jetty.servlet.ServletHolder
+import org.eclipse.jetty.util.ssl.SslContextFactory
 import org.eclipse.jetty.util.thread.QueuedThreadPool
 
-class ServerModule: AbstractModule() {
+class ServerModule : AbstractModule() {
 
     @Singleton
     @Provides
     fun provideHttpConfiguration(): HttpConfiguration {
         // these values are hard coded but should be injected as guice props
-        val httpConfig = HttpConfiguration()
-        httpConfig.secureScheme = "https"
-        httpConfig.securePort = 8001
-        httpConfig.outputBufferSize = 32768
-        httpConfig.requestHeaderSize = 8192
-        httpConfig.responseHeaderSize = 8192
-        httpConfig.sendServerVersion = true
-        httpConfig.sendDateHeader = false
+        val httpsConfig = HttpConfiguration()
+        httpsConfig.secureScheme = "https"
+        httpsConfig.securePort = 8001
+        httpsConfig.outputBufferSize = 32768
+        httpsConfig.requestHeaderSize = 8192
+        httpsConfig.responseHeaderSize = 8192
+        httpsConfig.sendServerVersion = true
+        httpsConfig.sendDateHeader = false
 
-        return httpConfig
+        httpsConfig.addCustomizer(SecureRequestCustomizer())
+        return httpsConfig
+    }
+
+    @Provides
+    fun provideSslContextFactory(): SslContextFactory {
+        val sslContextFactory = SslContextFactory()
+        sslContextFactory.keyStorePath = System.getProperty("user.dir") + "/keystore.jks"
+        sslContextFactory.setKeyStorePassword("123456")
+        sslContextFactory.setKeyManagerPassword("123456")
+        return sslContextFactory
     }
 
     @Provides
@@ -40,7 +53,7 @@ class ServerModule: AbstractModule() {
 
     @Provides
     @Singleton
-    fun provideServletContextHandler(signalsServlet: SignalsServlet):ServletContextHandler {
+    fun provideServletContextHandler(signalsServlet: SignalsServlet): ServletContextHandler {
         val context = ServletContextHandler()
         context.addServlet(ServletHolder(signalsServlet), "/signals")
         return context
@@ -51,15 +64,20 @@ class ServerModule: AbstractModule() {
     fun provideJettyServer(
         servletContextHandler: ServletContextHandler,
         threadPool: QueuedThreadPool,
-        httpConfig: HttpConfiguration
+        httpConfig: HttpConfiguration,
+        sslContextFactory: SslContextFactory
     ): Server {
         // Create server
         val server = Server(threadPool)
 
         // setup connector
-        val http = ServerConnector(server, HttpConnectionFactory(httpConfig))
-        http.port = 8000
-        server.addConnector(http)
+        val https = ServerConnector(
+            server,
+            SslConnectionFactory(sslContextFactory, "http/1.1"),
+            HttpConnectionFactory(httpConfig)
+        )
+        https.port = 8001
+        server.addConnector(https)
 
         // setup handler
         server.handler = servletContextHandler

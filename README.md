@@ -7,4 +7,4 @@ Server is created using embeded Jetty server. It serves the request in async way
 Steps to run the server:
 1. mvn package # create jar 
 2. java -jar target/GifService-1.0-SNAPSHOT-jar-with-dependencies.jar  # run the jar 
-3. curl http://localhost:8000/signals?q=cheese # search gifs using query parameter
+3. curl https://localhost:8001/signals?q=cheese -k # search gifs using query parameter
